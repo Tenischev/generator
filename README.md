@@ -45,13 +45,14 @@ Usage: cli [options] <asyncapi> <template>
 
 Options:
   -V, --version                  output the version number
-  -d, --disable-hook <hookName>  disable a specific hook
+  -d, --disable-hook <hookType>  disable a specific hook type
+  --debug                        enable more specific errors in the console. At the moment it only shows specific errors about filters. Keep in mind that as a result errors about template are less descriptive
   -i, --install                  installs the template and its dependencies (defaults to false)
   -n, --no-overwrite <glob>      glob or path of the file(s) to skip when regenerating
   -o, --output <outputDir>       directory where to put the generated files (defaults to current directory)
   -p, --param <name=value>       additional param to pass to templates
   --force-write                  force writing of the generated files to given directory even if it is a git repo with unstaged files or not empty dir (defaults to false)
-  --watch-template               watches the template directory and the AsyncAPI document, and re-generate the files when changes occur
+  --watch-template               watches the template directory and the AsyncAPI document, and re-generate the files when changes occur. Ignores the output directory. This flag should be used only for template development.
   -h, --help                     output usage information
 ```
 
